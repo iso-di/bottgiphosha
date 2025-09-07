@@ -1,3 +1,4 @@
+
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
@@ -29,7 +30,7 @@ async def user_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Прив’язуємо id повідомлення групи до користувача
     user_message_map[sent.message_id] = user.id
 
-    await update.message.reply_text("✅ Ваше звернення передано в підтримку.")
+    # ❌ Не надсилаємо підтвердження користувачу
 
 
 # Відповідь з групи
@@ -43,7 +44,7 @@ async def support_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             # Пересилаємо користувачу
             await context.bot.send_message(
                 chat_id=user_id,
-                text=f"💬 Відповідь від менеджерів:\n{text}"
+                text=f"💬 Відповідь від менеджера:\n{text}"
             )
 
 
