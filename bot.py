@@ -2,8 +2,8 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # === НАЛАШТУВАННЯ ===
-TOKEN = "ТОКЕН_ТВОГО_БОТА"
-SUPPORT_GROUP_ID = -1001234567890  # ID групи підтримки (зі знаком -100...)
+TOKEN = "8092801274:AAG0PhrfYVaQ83IusIgQzWhf2Sa19jo-ywI"
+SUPPORT_GROUP_ID = -4859105133  # ID групи підтримки (зі знаком -100...)
 
 # Словник: message_id у групі -> user_id
 user_message_map = {}
