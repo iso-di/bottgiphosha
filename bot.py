@@ -41,10 +41,10 @@ async def support_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
             user_id = user_message_map[reply_id]
             text = update.message.text
 
-            # Пересилаємо користувачу
+            # Пересилаємо користувачу без префікса
             await context.bot.send_message(
                 chat_id=user_id,
-                text=f"💬 Відповідь від менеджера:\n{text}"
+                text=text
             )
 
 
