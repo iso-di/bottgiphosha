@@ -13,7 +13,7 @@ user_message_map = {}
 
 # ==== ФУНКЦИЯ ДЛЯ ПАРСИНГА КУРСА ====
 def get_usd_rate():
-    url = "https://kurs.sumy.ua/uk/"
+    url = "https://obmenka.sumy.ua"
     r = requests.get(url, timeout=5)
     soup = BeautifulSoup(r.text, "html.parser")
 
